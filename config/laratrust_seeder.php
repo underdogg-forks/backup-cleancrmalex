@@ -2,34 +2,76 @@
 
 return [
     'role_structure' => [
-        'superadministrator' => [
-            'users' => 'c,r,u,d',
-            'acl' => 'c,r,u,d',
+        'owner' => [
+            'users' => 'c,p,r,u,d',
+            'acl' => 'c,p,r,u,d',
+            'email' => 'c,p,r,u,d',
+            'calendar' => 'c,p,r,u,d',
+            'projects' => 'c,p,r,u,d',
+            'hrm' => 'c,p,r,u,d',
+            'crm' => 'c,p,r,u,d',
             'profile' => 'r,u'
         ],
         'administrator' => [
-            'users' => 'c,r,u,d',
+            'users' => 'c,p,r,u,d',
+            'acl' => 'c,p,r,u,d',
+            'email' => 'c,p,r,u,d',
+            'calendar' => 'c,p,r,u,d',
+            'projects' => 'c,p,r,u,d',
+            'hrm' => 'c,p,r,u,d',
+            'crm' => 'c,p,r,u,d',
             'profile' => 'r,u'
         ],
-        'editor' => [
+        'manager' => [
+            'acl' => 'c,p,r,u',
+            'email' => 'c,p,r,u',
+            'calendar' => 'c,p,r,u',
+            'projects' => 'c,p,r,u',
+            'hrm' => 'c,p,r,u',
+            'crm' => 'c,p,r,u',
             'profile' => 'r,u'
         ],
-        'author' => [
+        'teamleader' => [
+            'acl' => 'c,p,r,u',
+            'email' => 'c,p,r,u',
+            'calendar' => 'c,p,r,u',
+            'projects' => 'c,p,r,u',
+            'hrm' => 'c,p,r,u',
+            'crm' => 'c,p,r,u',
             'profile' => 'r,u'
         ],
         'contributor' => [
+            'acl' => 'r,u',
+            'email' => 'c,p,r,u',
+            'calendar' => 'c,p,r,u',
+            'projects' => 'c,p,r,u',
+            'hrm' => 'r',
+            'crm' => 'c,p,r,u',
             'profile' => 'r,u'
         ],
-        'supporter' => [
+        'staff' => [
+            'acl' => 'r,u',
+            'email' => 'c,p,r,u',
+            'calendar' => 'c,p,r,u',
+            'projects' => 'c,p,r,u',
+            'hrm' => 'r',
+            'crm' => 'r,u',
             'profile' => 'r,u'
         ],
         'subscriber' => [
-            'profile' => 'r,u'
+            'acl' => 'r',
+            'email' => 'r',
+            'calendar' => 'r',
+            'projects' => 'r',
+            'hrm' => 'r',
+            'crm' => 'r',
+            'profile' => 'r'
         ],
     ],
     'permission_structure' => [],
     'permissions_map' => [
         'c' => 'create',
+        'p' => 'copy',
         'r' => 'read',
         'u' => 'update',
         'd' => 'delete'
